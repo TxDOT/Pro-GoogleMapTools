@@ -1,0 +1,6 @@
+C:\Users\MWASHBUR\source\repos\GoogleMapToolsAddin\GoogleMapToolsAddin\bin\Debug\GoogleMapToolsAddin.dll
+C:\Users\MWASHBUR\source\repos\GoogleMapToolsAddin\GoogleMapToolsAddin\bin\Debug\GoogleMapToolsAddin.pdb
+C:\Users\MWASHBUR\source\repos\GoogleMapToolsAddin\GoogleMapToolsAddin\obj\Debug\GoogleMapToolsAddin.csproj.CoreCompileInputs.cache
+C:\Users\MWASHBUR\source\repos\GoogleMapToolsAddin\GoogleMapToolsAddin\obj\Debug\GoogleMapToolsAddin.dll
+C:\Users\MWASHBUR\source\repos\GoogleMapToolsAddin\GoogleMapToolsAddin\obj\Debug\GoogleMapToolsAddin.pdb
+C:\Users\MWASHBUR\source\repos\GoogleMapToolsAddin\GoogleMapToolsAddin\obj\Debug\GoogleMapToolsAddin.csprojAssemblyReference.cache

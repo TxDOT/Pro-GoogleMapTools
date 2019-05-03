@@ -1,0 +1,56 @@
+﻿<ArcGIS defaultAssembly="GoogleMapToolsAddin.dll" defaultNamespace="GoogleMapToolsAddin" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
+  <AddInInfo id="{ccc28105-f728-4128-831e-ae3125801bfd}" version="1.0" desktopVersion="2.3.15769">
+    <Name>GoogleMapToolsAddin</Name>
+    <Description>Toolkit that launches either Google Maps or Streetview in a browser at location and scale corresponding to MapView</Description>
+    <Image>Images\AddinDesktop32.png</Image>
+    <Author>Matt Washburn</Author>
+    <Company>Texas Department of Transportion</Company>
+    <Date>5/3/2019 8:03:57 AM, 2019</Date>
+    <Subject>Map Exploration</Subject>
+    <!-- Note subject can be one or more of these topics:
+                    Content, Framework, Editing, Geodatabase, Geometry, Geoprocessing, Layouts, Map Authoring, Map Exploration -->
+  </AddInInfo>
+  <modules>
+    <insertModule id="GoogleMapToolsAddin_Module" className="GoogleMapTools" autoLoad="false" caption="GoogleMapTools">
+      <!-- uncomment to have the control hosted on a separate tab-->
+      <tabs>
+        <tab id="GoogleMapToolsAddin_Tab1" caption="Google Map Tools">
+          <group refID="GoogleMapToolsAddin_Group1" />
+        </tab>
+      </tabs>
+      <groups>
+      <!-- comment this out if you have no controls on the Addin tab to avoid
+              an empty group-->
+      <!--<group id="GoogleMapToolsAddin_Group1" caption="Group 1" appearsOnAddInTab="true">
+      </group>-->
+      <group id="GoogleMapToolsAddin_Group1" caption="Google Map Tools" appearsOnAddInTab="false">
+          <button refID="GoogleMapToolsAddin_JumpToGoogleButton" size="large" />
+          <tool refID="GoogleMapToolsAddin_JumpToStreetviewTool" size="large" />
+          
+        </group>
+      </groups>
+      <controls>
+        <!-- add your controls here -->
+        <button id="GoogleMapToolsAddin_JumpToGoogleButton" caption="Jump To Google" className="JumpToGoogleButton" loadOnClick="true" smallImage="Images\jumpMM16.png" largeImage="Images\jumpMM32.png">
+          <tooltip heading="Jump To Google">Jump To Google Maps<disabledText /></tooltip>
+        </button>
+        <tool id="GoogleMapToolsAddin_JumpToStreetviewTool" caption="Jump To Streetview" className="JumpToStreetviewTool" loadOnClick="true" smallImage="Images\jump16.png" largeImage="Images\jump32.png">
+          <!--condition="esri_mapping_mapPane">-->
+          <tooltip heading="Jump To Streetview">Jump To Google Streetview<disabledText /></tooltip>
+        </tool>
+      </controls>
+      <groups>
+        <!--<group id="GoogleMapToolsAddin_Group1" caption="Group 1" appearsOnAddInTab="true">
+          <tool refID="GoogleMapToolsAddin_JumpToStreetviewTool" size="large" />
+        </group>-->
+      </groups>
+    </insertModule>
+    <updateModule refID="esri_mapping">
+      <groups>
+        <updateGroup refID="esri_mapping_navigateGroup">
+          <insertTool refID="GoogleMapToolsAddin_JumpToGoogleButton" size="large" />
+        </updateGroup>
+      </groups>
+    </updateModule>
+  </modules>
+</ArcGIS>
